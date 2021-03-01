@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model.Models;
 using Repo;
 
 namespace Service
@@ -16,6 +17,16 @@ namespace Service
         {
             _repo = repo;
             _mapper = mapper;
+        }
+
+        public async Task<IEnumerable<AppUser>> GetUsers()
+        {
+            return await _repo.GetUsers();
+        }
+
+        public async Task<AppUser> GetUserById(int id)
+        {
+            return await _repo.GetUserById(id);
         }
     }
 }
