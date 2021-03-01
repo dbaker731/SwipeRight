@@ -19,6 +19,7 @@ namespace SwipeRight.Controllers
             _logic = logic;
         }
 
+        // api/users
         [HttpGet]
         public async Task<IEnumerable<AppUser>> GetUsers()
         {
