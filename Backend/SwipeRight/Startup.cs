@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Repo;
 using Service;
+using SwipeRight.Interfaces;
+using SwipeRight.Services;
 
 namespace SwipeRight
 {
@@ -33,6 +35,7 @@ namespace SwipeRight
             services.AddScoped<Repository>();
             services.AddScoped<Logic>();
             services.AddScoped<Mapper>();
+            services.AddScoped<ITokenService, TokenService>();
 
             services.AddSwaggerGen(c =>
             {

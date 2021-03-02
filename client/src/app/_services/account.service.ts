@@ -13,6 +13,4 @@ export class AccountService {
   getUsers() {
     return this.http.get(this.baseUrl + 'users');
   }
-
-
 }
