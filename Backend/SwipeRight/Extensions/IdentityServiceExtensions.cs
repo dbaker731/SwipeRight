@@ -12,8 +12,6 @@ namespace SwipeRight.Extensions
 {
     public static class IdentityServiceExtensions
     {
-        private static object config;
-
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration config)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -28,7 +26,6 @@ namespace SwipeRight.Extensions
                   };
               });
             return services;
-
         }
     }
 }
