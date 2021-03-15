@@ -19,7 +19,7 @@ namespace Repo
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SwipeRightDevelopment;Trusted_Connection=True;");
+                options.UseSqlServer("Server=localhost;Database=SwipeRightDev;User Id=sa;Password=Bd195357!;");
             }
 
         }
