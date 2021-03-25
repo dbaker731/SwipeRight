@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,11 @@ namespace Repo
         public async Task<AppUser> GetUserById(int id)
         {
             return await users.FirstOrDefaultAsync(users => users.Id == id);
+        }
+
+        public AppUser GetUserByIdNonAsync(int id)
+        {
+            return users.FirstOrDefault(users => users.Id == id);
         }
 
         public async Task<AppUser> RegisterUser(AppUser newUser)

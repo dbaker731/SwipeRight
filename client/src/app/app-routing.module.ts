@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { HomeComponent } from './_components/home/home.component';
 import { ListsComponent } from './_components/lists/lists.component';
 import { MemberDetailComponent } from './_components/members/member-detail/member-detail.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path: 'messages', component: MessagesComponent},
     ]
   },
+  {path: 'errors', component: TestErrorsComponent},
   {path: '**', component: HomeComponent, pathMatch: 'full'},
   
 ];

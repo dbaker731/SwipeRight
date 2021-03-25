@@ -70,6 +70,11 @@ namespace Service
             return await _repo.GetUserById(id);
         }
 
-        
+        public AppUser GetUserByIdNonAsync(int id)
+        {
+            return _repo.GetUserByIdNonAsync(id);
+        }
+
+
     }
 }
